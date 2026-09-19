@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Boletim.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">boletim-simples</a> &gt; <a href="index.source.html" class="el_package">br.edu.ifpr.boletim</a> &gt; <span class="el_source">Boletim.java</span></div><h1>Boletim.java</h1><pre class="source lang-java linenums">package br.edu.ifpr.boletim;
+
+<span class="fc" id="L3">public class Boletim {</span>
+
+    public double calcularMedia(double nota1, double nota2) {
+<span class="fc" id="L6">        double soma = nota1 + nota2;</span>
+<span class="fc" id="L7">        double media = soma / 2;</span>
+<span class="fc" id="L8">        return media;</span>
+    }
+
+    public String verificarSituacao(double media) {
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        if (media &gt;= 7) {</span>
+<span class="fc" id="L13">            return &quot;APROVADO&quot;;</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        } else if (media &gt;= 4) {</span>
+<span class="fc" id="L15">            return &quot;RECUPERACAO&quot;;</span>
+        } else {
+<span class="fc" id="L17">            return &quot;REPROVADO&quot;;</span>
+        }
+    }
+
+    public int contarAprovados(double[] medias) {
+<span class="fc" id="L22">        int quantidade = 0;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        for (int i = 0; i &lt; medias.length; i++) {</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">            if (medias[i] &gt;= 7) {</span>
+<span class="fc" id="L25">                quantidade = quantidade + 1;</span>
+            }
+        }
+<span class="fc" id="L28">        return quantidade;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
